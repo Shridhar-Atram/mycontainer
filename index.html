@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Moving Docker Images</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="js/execCont.js"></script>
+  <script src="js/launchCont.js"></script>
+  <script src="js/listCont.js"></script>
+  <script src="js/listImg.js"></script>
+  <script src="js/removeCont.js"></script>
+  <script src="js/startCont.js"></script>
+  <script src="js/stopCont.js"></script>
+  <script src="js/toggle.js"></script>
+</head>
+<body>
+  <header>
+    <h1 class="title">Docker Tools</h1>
+    <div class="docker-images">
+      <div class="docker-image" id="docker1"></div>
+      <div class="docker-image" id="docker2"></div>
+      <div class="docker-image" id="docker3"></div>
+      <div class="docker-image" id="docker4"></div>
+      <div class="docker-image" id="docker5"></div>
+      <div class="docker-image" id="docker6"></div>
+      <div class="docker-image" id="docker7"></div>
+    </div>
+  </header>
+
+  <div class="header-container">
+    <h2>OPTIONS</h2>
+    <div class="button-container">
+      <div class="option" onclick="listCont()" onmouseover="buttonHover(this)" onmouseout="buttonHover(this)">List Container</div>
+      <div class="option" onclick="listImg()" onmouseover="buttonHover(this)" onmouseout="buttonHover(this)">List Images</div>
+      <div class="option" onclick="toggleLaunchCont()" onmouseover="buttonHover(this)" onmouseout="buttonHover(this)">Launch Container</div>
+      <div id="remove" style="display: none">
+        <input type="text" placeholder="Container Name" id="launchContName" class="input-field" />
+        <input type="text" placeholder="Image Name" id="launchImgName" class="input-field" />
+        <button class="submit-button" onclick="launchCont()" onmouseover="buttonHover(this)" onmouseout="buttonHover(this)">Submit</button>
+      </div>
+      <div class="option" onclick="toggleStartCont()" onmouseover="buttonHover(this)" onmouseout="buttonHover(this)">Start Container</div>
+      <div id="remove1" style="display: none">
+        <input type="text" placeholder="Container Name" id="startContName" class="input-field" />
+        <button class="submit-button" onclick="startCont()" onmouseover="buttonHover(this)" onmouseout="buttonHover(this)">Submit</button>
+      </div>
+      <div class="option" onclick="toggleStopCont()" onmouseover="buttonHover(this)" onmouseout="buttonHover(this)">Stop Container</div>
+      <div id="remove2" style="display: none">
+        <input type="text" placeholder="Container Name" id="stopContName" class="input-field" />
+        <button class="submit-button" onclick="stopCont()" onmouseover="buttonHover(this)" onmouseout="buttonHover(this)">Submit</button>
+      </div>
+      <div class="option" onclick="toggleRemoveCont()" onmouseover="buttonHover(this)" onmouseout="buttonHover(this)">Remove Container</div>
+      <div id="remove3" style="display: none">
+        <input type="text" placeholder="Container Name" id="removeContName" class="input-field" />
+        <button class="submit-button" onclick="removeCont()" onmouseover="buttonHover(this)" onmouseout="buttonHover(this)">Submit</button>
+      </div>
+      <div class="option" onclick="toggleExecCont()" onmouseover="buttonHover(this)" onmouseout="buttonHover(this)">Execute Container</div>
+      <div id="remove4" style="display: none">
+        <input type="text" placeholder="Container Name" id="executeContName" class="input-field" />
+        <input type="text" placeholder="Command" id="cmd" class="input-field" />
+        <button class="submit-button" onclick="execCont()" onmouseover="buttonHover(this)" onmouseout="buttonHover(this)">Submit</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="column" style="background-color: #2496ed">
+    <h2 id="out">OUTPUT</h2>
+    <div id="op"></div>
+  </div>
+</body>
+</html>

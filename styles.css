@@ -1,0 +1,149 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  height: 200px; /* Increased height to accommodate multiple Docker images and buttons */
+  background-color: #3f51b5;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column; /* To stack buttons and Docker images vertically */
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  color: #fff;
+  font-size: 36px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 20px; /* Add some spacing between title and buttons */
+}
+
+.docker-images {
+  display: flex;
+  justify-content: center;
+}
+
+.docker-image {
+  width: 100px;
+  height: 60px;
+  background-image: url('docker-icon.png'); /* Replace with your Docker image path */
+  background-size: cover;
+  margin: 0 10px; /* Adjust the margin between Docker images */
+  animation: moveDocker 6s linear infinite alternate; /* Change the animation duration and timing function as needed */
+}
+
+/* Your existing CSS styles here */
+
+.header-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px; /* Add some spacing between Docker images and buttons */
+}
+
+.option {
+  width: 150px;
+  height: 50px;
+  background-color: #3f51b5;
+  color: #fff;
+  font-size: 15px;
+  font-weight: bold;
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease; /* Add a smooth transition on hover */
+}
+
+.custom-button:hover {
+  background-color: #2c387e; /* Darker color on hover */
+}
+
+.input-container {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1;
+  display: none;
+  transform: translateY(100%); /* Move the input container below the button */
+}
+
+.input-field {
+  width: 300px;
+  height: 40px;
+  padding: 8px;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.submit-button {
+  width: 120px;
+  height: 40px;
+  background-color: #3f51b5;
+  color: #fff;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+.submit-button:hover {
+  background-color: #2c387e;
+}
+
+@keyframes moveDocker {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-20px); /* Adjust the vertical movement */
+  }
+}
+.option {
+  position: relative;
+  margin: 10px;
+}
+#op {
+  border: 2px solid white;
+  padding: 10px 20px;
+  margin: auto;
+  margin-right: 15px;
+  height: 83%;
+  background-color: white;
+  font-size: 12px;
+  overflow: scroll;
+  border-radius: 10px;
+  text-align: left;
+  word-wrap: inherit;
+  font-weight: bold;
+}
+#out {
+  text-align: center;
+  font-family: Poppins, sans-serif;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+}
+.column {
+  float: left;
+  width: 100%;
+  align-items: center;
+  padding: 1px;
+  height: 650px;
+  background-color: rgb(0, 255, 255);
+  /*background: url("bg-img.jpeg") no-repeat center center fixed;*/
+  background-size: cover;
+  /* height: 100%; Should be removed. Only for demonstration */
+}
